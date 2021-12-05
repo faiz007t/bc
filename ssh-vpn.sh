@@ -4,7 +4,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$( curl https://raw.githubusercontent.com/Thebot119/premium/master/iptext.sh | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/faiz007t/premium/main/iptext.sh | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 clear
 echo -e "${green} Please Wait, Proses...${NC}"
@@ -31,7 +31,7 @@ organizationalunit=RAHCHIEL.xyz
 commonname=RAHCHIEL.xyz
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Thebot119/mysc/master/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/faiz007t/bc/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -98,14 +98,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Thebot119/mysc/master/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/faiz007t/bc/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Thebot119/mysc/master/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/faiz007t/bc/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Thebot119/mysc/master/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/faiz007t/bc/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -135,7 +135,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Thebot119/mysc/master/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/faiz007t/bc/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -189,7 +189,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/Thebot119/mysc/master/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/faiz007t/bc/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -227,58 +227,58 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/Thebot119/mysc/master/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/Thebot119/mysc/master/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Thebot119/mysc/master/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/Thebot119/mysc/master/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/Thebot119/mysc/master/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/Thebot119/mysc/master/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/Thebot119/mysc/master/member.sh"
-wget -O delete "https://raw.githubusercontent.com/Thebot119/mysc/master/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/Thebot119/mysc/master/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/Thebot119/mysc/master/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Thebot119/mysc/master/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/Thebot119/mysc/master/info.sh"
-wget -O ram "https://raw.githubusercontent.com/Thebot119/mysc/master/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/Thebot119/mysc/master/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/Thebot119/mysc/master/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/Thebot119/mysc/master/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/Thebot119/mysc/master/tendang.sh"
-wget -O change-port "https://raw.githubusercontent.com/Thebot119/mysc/master/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/Thebot119/mysc/master/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/Thebot119/mysc/master/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/Thebot119/mysc/master/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/Thebot119/mysc/master/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/Thebot119/mysc/master/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/Thebot119/mysc/master/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/Thebot119/mysc/master/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/Thebot119/mysc/master/port-vless.sh"
-wget -O port-xray "https://raw.githubusercontent.com/Thebot119/mysc/master/port-xray.sh"
-wget -O wbmn "https://raw.githubusercontent.com/Thebot119/mysc/master/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/Thebot119/mysc/master/xp.sh"
-wget -O menu-vmess "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-vmess.sh"
-wget -O menu-vless "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-vless.sh"
-wget -O menu-l2tp "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-l2tp.sh"
-wget -O menu-pptp "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-pptp.sh"
-wget -O menu-sstp "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-sstp.sh"
-wget -O menu-ss "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-ss.sh"
-wget -O menu-ssr "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-ssr.sh"
-wget -O menu-trojan "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-trojan.sh"
-wget -O menu-wg "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-wg.sh"
-wget -O menu-ssh "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-ssh.sh"
-wget -O menu-xray "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-xray.sh"
-wget -O running "https://raw.githubusercontent.com/Thebot119/mysc/master/running.sh"
-wget -O menu-trgo "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-trgo.sh"
-wget -O add-dom "https://raw.githubusercontent.com/Thebot119/mysc/master/cf/add-dom.sh"
-wget -O add-cff "https://raw.githubusercontent.com/Thebot119/mysc/master/cf/add-cff.sh"
-wget -O add-cfh "https://raw.githubusercontent.com/Thebot119/mysc/master/cf/add-cfh.sh"
-wget -O menu-cf "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-cf.sh"
-wget -O kernel-updt "https://raw.githubusercontent.com/Thebot119/mysc/master/kernel-updt.sh"
-wget -O autoreboot "https://raw.githubusercontent.com/Thebot119/mysc/master/autoreboot.sh"
-wget -O update "https://raw.githubusercontent.com/Thebot119/mysc/master/update.sh"
-wget -O menu-trgo "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-trgo.sh"
-wget -O menu-xx "https://raw.githubusercontent.com/Thebot119/mysc/master/menu-xx.sh"
-wget -O bbr "https://raw.githubusercontent.com/Thebot119/mysc/master/bbr.sh"
+wget -O add-host "https://raw.githubusercontent.com/faiz007t/bc/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/faiz007t/bc/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/faiz007t/bc/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/faiz007t/bc/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/faiz007t/bc/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/faiz007t/bc/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/faiz007t/bc/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/faiz007t/bc/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/faiz007t/bc/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/faiz007t/bc/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/faiz007t/bc/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/faiz007t/bc/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/faiz007t/bc/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/faiz007t/bc/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/faiz007t/bc/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/faiz007t/bc/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/faiz007t/bc/main/tendang.sh"
+wget -O change-port "https://raw.githubusercontent.com/faiz007t/bc/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/faiz007t/bc/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/faiz007t/bc/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/faiz007t/bc/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/faiz007t/bc/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/faiz007t/bc/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/faiz007t/bc/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/faiz007t/bc/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/faiz007t/bc/main/port-vless.sh"
+wget -O port-xray "https://raw.githubusercontent.com/faiz007t/bc/main/port-xray.sh"
+wget -O wbmn "https://raw.githubusercontent.com/faiz007t/bc/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/faiz007t/bc/main/xp.sh"
+wget -O menu-vmess "https://raw.githubusercontent.com/faiz007t/bc/main/menu-vmess.sh"
+wget -O menu-vless "https://raw.githubusercontent.com/faiz007t/bc/main/menu-vless.sh"
+wget -O menu-l2tp "https://raw.githubusercontent.com/faiz007t/bc/main/menu-l2tp.sh"
+wget -O menu-pptp "https://raw.githubusercontent.com/faiz007t/bc/main/menu-pptp.sh"
+wget -O menu-sstp "https://raw.githubusercontent.com/faiz007t/bc/main/menu-sstp.sh"
+wget -O menu-ss "https://raw.githubusercontent.com/faiz007t/bc/main/menu-ss.sh"
+wget -O menu-ssr "https://raw.githubusercontent.com/faiz007t/bc/main/menu-ssr.sh"
+wget -O menu-trojan "https://raw.githubusercontent.com/faiz007t/bc/main/menu-trojan.sh"
+wget -O menu-wg "https://raw.githubusercontent.com/faiz007t/bc/main/menu-wg.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/faiz007t/bc/main/menu-ssh.sh"
+wget -O menu-xray "https://raw.githubusercontent.com/faiz007t/bc/main/menu-xray.sh"
+wget -O running "https://raw.githubusercontent.com/faiz007t/bc/main/running.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/faiz007t/bc/main/menu-trgo.sh"
+wget -O add-dom "https://raw.githubusercontent.com/faiz007t/bc/main/cf/add-dom.sh"
+wget -O add-cff "https://raw.githubusercontent.com/faiz007t/bc/main/cf/add-cff.sh"
+wget -O add-cfh "https://raw.githubusercontent.com/faiz007t/bc/main/cf/add-cfh.sh"
+wget -O menu-cf "https://raw.githubusercontent.com/faiz007t/bc/main/menu-cf.sh"
+wget -O kernel-updt "https://raw.githubusercontent.com/faiz007t/bc/main/kernel-updt.sh"
+wget -O autoreboot "https://raw.githubusercontent.com/faiz007t/bc/main/autoreboot.sh"
+wget -O update "https://raw.githubusercontent.com/faiz007t/bc/main/update.sh"
+wget -O menu-trgo "https://raw.githubusercontent.com/faiz007t/bc/main/menu-trgo.sh"
+wget -O menu-xx "https://raw.githubusercontent.com/faiz007t/bc/main/menu-xx.sh"
+wget -O bbr "https://raw.githubusercontent.com/faiz007t/bc/main/bbr.sh"
 chmod +x bbr
 chmod +x menu-xx
 chmod +x menu-trgo
