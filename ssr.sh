@@ -214,8 +214,8 @@ Start_SSR
 }
 Install_SSR
 wget -O /usr/bin/ssr https://raw.githubusercontent.com/faiz007t/bc/main/ssrmu.sh && chmod +x /usr/bin/ssr
-wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/faiz007t/bc/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
-wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/faiz007t/bc/main/del-ssr.sh && chmod +x /usr/bin/del-ssr
+wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/faiz007t/bc/main//add-ssr.sh && chmod +x /usr/bin/add-ssr
+wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/faiz007t/bc/main//del-ssr.sh && chmod +x /usr/bin/del-ssr
 wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/faiz007t/bc/main/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
