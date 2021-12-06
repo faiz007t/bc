@@ -2,7 +2,7 @@
 # Load params
 source /etc/wireguard/params
 source /var/lib/premium-script/ipvps.conf
-if [[ "$IP" = "115.164.56.179" ]]; then
+if [[ "$IP" = "" ]]; then
 SERVER_PUB_IP=$(wget -qO- ipinfo.io/ip);
 else
 SERVER_PUB_IP=$IP
