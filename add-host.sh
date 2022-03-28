@@ -2,8 +2,8 @@
 echo "Tukar Domain?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes) make install ; break ;;
-        No) exit ;;
+        Yes ) make install; break;;
+        No ) exit;;
     esac
 done
 clear
