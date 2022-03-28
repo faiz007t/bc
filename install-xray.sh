@@ -9,8 +9,8 @@ mkdir -p /usr/local/xray/
 
 # // Installation XRay Core
 wget -q -O /usr/local/xray/xray "https://raw.githubusercontent.com/faiz007t/bc/main/xray-mini" 
-wget -q -O /usr/local/xray/geosite.dat "https://raw.githubusercontent.com/faiz007t/bc/main/geosite.dat"
-wget -q -O /usr/local/xray/geoip.dat "https://raw.githubusercontent.com/faiz007t/bc/main/geoip.dat"
+wget -q -O /usr/local/xray/geosite.dat "https://github.com/bejiba/Xray-ws/raw/main/geosite.dat"
+wget -q -O /usr/local/xray/geoip.dat "https://github.com/bejiba/Xray-ws/raw/main/geoip.dat"
 chmod +x /usr/local/xray/xray
 
 # // Make XRay Mini Root Folder

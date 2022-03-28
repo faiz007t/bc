@@ -38,5 +38,6 @@ case $opt in
 4) clear ; add-cfh ;;
 5) clear ; certv2ray ;;
 6) clear ; menu ;;
+x) exit ;;
 *) echo "Please enter an correct number" ;;
 esac
