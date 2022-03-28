@@ -2,17 +2,17 @@
 echo -e ""
 echo -e "======================================"
 echo -e ""
-echo -e "   $blue [1]  Change Port Stunnel4"
-echo -e "   $blue [2]  Change Port OpenVPN"
-echo -e "   $blue [3]  Change Port Wireguard"
-echo -e "   $blue [4]  Change Port Vmess"
-echo -e "   $blue [5]  Change Port Vless"
-echo -e "   $blue [6]  Change Port Trojan"
-echo -e "   $blue [7]  Change Port Squid"
-echo -e "   $blue [8]  Change Port SSTP"
-echo -e "   $blue [9]  Change Port XRAY"
-echo -e "   $blue [10] Change Port Trojan GO"
-echo -e "   $blue [11]$NC $yell BACK TO MENU$NC"
+echo -e "     [1]  Change Port Stunnel4"
+echo -e "     [2]  Change Port OpenVPN"
+echo -e "     [3]  Change Port Wireguard"
+echo -e "     [4]  Change Port Vmess"
+echo -e "     [5]  Change Port Vless"
+echo -e "     [6]  Change Port Trojan"
+echo -e "     [7]  Change Port Squid"
+echo -e "     [8]  Change Port SSTP"
+echo -e "     [9]  Change Port XRAY"
+echo -e "     [10] Change Port Trojan GO"
+echo -e "     [x]  Exit"
 echo -e "======================================"
 echo -e ""
 read -p "     Select From Options [1-10 or x] :  " port
@@ -48,7 +48,7 @@ menu-xx
 10)
 port-trgo
 ;;
-11)
+x)
 clear
 menu
 ;;
